@@ -87,8 +87,21 @@ WSGI_APPLICATION = 'djangocrud.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
+    """
+    'default': {   
+        'ENGINE': 'django.db.backends.postgresql',   
+        'NAME': 'my_db_qgz2',   
+        'USER': 'my_db_qgz2_user',   
+        'PASSWORD': 'qsC1SeV17fCJUmWM28bnQfwFSArd9L0b',   
+        'HOST': '127.0.0.1',   
+        'PORT': '3306',   
+        'OPTIONS': {   
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"   
+        }   
+    }
+    """  
     'default': dj_database_url.config(
-        default='postgres://my_db_qgz2_user:qsC1SeV17fCJUmWM28bnQfwFSArd9L0b@dpg-cj29phtiuie55pg8d7dg-a/my_db_qgz2postgres',
+        default='postgres://my_db_qgz2_user:qsC1SeV17fCJUmWM28bnQfwFSArd9L0b@dpg-cj29phtiuie55pg8d7dg-a.oregon-postgres.render.com/my_db_qgz2',
         conn_max_age=5000
     )
         #'ENGINE': 'django.db.backends.sqlite3',
